@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pizzafactory(pizzasize){
+            return{
+            size : pizzasize ,
+            crust : "original" ,
+            
+            bake(){
+                    console.log("it\'s a pizza time")
+                }
+    
+        }
+    }
+        const myPizza = pizzafactory("large")
+        console.log(pizzafactory().bake());
+       myPizza.bake()
+        console.log(myPizza);
+
+//  second example
+
+
+
+function sandwichfactory(type ,price){
+    return{
+        type : type ,
+        price :price,
+        grilled(){
+            console.log("it\'s  time to eat a sandwich");
+        }
+    }
+}
+
+const mysandwich = sandwichfactory('grilled', "90")
+console.log(sandwichfactory().grilled());
+mysandwich.grilled()
+console.log(mysandwich);
+
+
+    </script>
+</body>
+</html>

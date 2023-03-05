@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function pizza(type){
+                this.type = type,
+                this.size ="medium",
+                this.crust ="origional" ,
+                this.bake = function (){
+                    console.log(
+                    `baking a ${this.size} ${this.crust} ${this.type} crust pizza`
+                );
+                }
+         }
+    const myPizza = new pizza("pepperoni")
+    console.log(myPizza);
+    myPizza.pizza = function(){
+        console.log(
+                    `baking a ${this.size} ${this.crust} ${this.type} crust pizza`
+                );
+    }
+    console.log(myPizza.pizza());
+
+
+//  second example
+function sandwich(price ,type){
+    this.type = type ,
+    this.price = price,
+    this.special = "special sandwich"
+   this.grilled = function(){
+    console.log(` grilled a ${this.special}) for me `);
+   }
+}
+
+const mysandwich = new sandwich("80", "veg")
+console.log(mysandwich);
+mysandwich.sandwich = function(){
+    console.log(` grilled a ${this.special}) for me `);
+}
+
+console.log(mysandwich.sandwich());
+
+    </script>
+</body>
+</html>
