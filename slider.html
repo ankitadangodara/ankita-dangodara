@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .contein {
+            width: 1000px;
+            height: 500px;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            transition: 1s;
+
+        }
+
+        .btn {
+            text-align: center;
+    
+        }
+
+        button {
+            padding: 10px 40px;
+            border-radius: 10px;
+            background-color: white;
+
+        }
+        button:hover {
+
+            transition: 1s;
+            opacity: 1;
+            background-color: rgba(86, 13, 222, 0.611);cursor: pointer;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contein">
+        <img src="https://picsum.photos/id/347/1000/500" class="pics" id="slideImage" alt="">
+        <img src="https://picsum.photos/id/247/1000/500" class="pics"  alt="">
+        <img src="https://picsum.photos/id/447/1000/500" class="pics" alt="">
+        <img src="https://picsum.photos/id/537/1000/500" class="pics" alt="">
+        <img src="https://picsum.photos/id/637/1000/500" class="pics" alt="">
+        <img src="https://picsum.photos/id/737/1000/500" class="pics" alt="">
+        <img src="https://picsum.photos/id/837/1000/500" class="pics" alt="">
+        <img src="https://picsum.photos/id/937/1000/500" class="pics" alt="">
+        <img src="https://picsum.photos/id/217/1000/500" class="pics" alt="">
+        <img src="https://picsum.photos/id/327/1000/500" class="pics" alt="">
+    </div>
+    <div>
+        <div class="btn">
+            <button onclick=" gopre() ">
+                <i class="fa-solid fa-angle-left"></i>
+            </button> 
+            <button onclick=" gonext() ">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+        </div>
+    </div>
+    <script>
+        const slide = document.querySelectorAll('.pics')
+        let count = 0
+
+        slide.forEach(
+            (img, index) => {
+                img.style.left = `${index * 100}%`
+            }
+        )
+        const slideImage = () => {
+            slide.forEach(
+                (img) => {
+                    img.style.transform = `translateX(-${count * 100}%)`
+                }
+            )
+        }
+
+        const gopre = () => {
+            count--
+            if(count == -1){
+                count = 9
+            }
+           
+
+            slideImage()
+
+        }
+        const gonext = () => {
+            count++
+           if(count >= slide.length){
+            count = 0
+           }
+
+            slideImage()
+        }
+
+         function first (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/247/1000/500" ;
+         }
+         function second (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/447/1000/500" ;
+         }
+         function third (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/537/1000/500" ;
+         }
+         function fourth (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/637/1000/500" ;
+         }
+         function fifth (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/737/1000/500" ;
+         }
+         function sixth (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/837/1000/500" ;
+         }
+         function seventh (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/937/1000/500" ;
+         }
+         function eight (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/217/1000/500" ;
+         }
+         function ningth (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/327/1000/500" ;
+         }
+         function tenth (){
+            document.getElementById("slideImage").src = "https://picsum.photos/id/347/1000/500" ;
+         }
+         setInterval(first,1000);
+         setInterval(second,2000);
+         setInterval(third,3000);
+         setInterval(fourth,4000);
+         setInterval(fifth,5000);
+         setInterval(sixth,6000);
+         setInterval(seventh,7000);
+         setInterval(eight,8000);
+         setInterval(ningth,9000);
+         setInterval(tenth,10000);
+    </script>
+</body>
+
+</html>
