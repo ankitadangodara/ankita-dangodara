@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Airportticket {
+
+            submit() {
+                alert(this.name + " your ticket is reserved and ticket no is :" + this.ticket_no)
+                let a = confirm("are you sure ? ")
+                if (a) {
+                    alert("happy journey")
+                }
+
+            }
+
+            cancel() {
+                alert(this.name + " your ticket is cancelled and  ticket no is :" + this.ticket_no)
+                let b = confirm("are you sure ? ")
+                if (b) {
+                    alert("your ticket is cancelled")
+                }
+
+            }
+
+            fill(name, ticket_no , time ) {
+                this.name = name,
+                this.ticket_no = ticket_no,
+                this.time = time
+                   
+            }
+
+            get checkingtime(){
+                
+                alert ("your checking time is " + this.time)
+                return this.time
+               
+            }
+            set settime(x){
+                alert ("flight take off at 5 p.m" )
+                this.time = x
+            }
+           
+
+        }
+        const rekha = new Airportticket()
+        rekha.fill("rekha", "A28" , "4 p.m")
+        const daki = new Airportticket()
+        daki.fill("daki", "B27" , "4 p.m")
+        rekha.submit()
+        console.log(rekha.checkingtime);
+        console.log(rekha.settime = "5 p.m");
+        daki.submit()
+        console.log(daki.checkingtime);
+        console.log(daki.settime = "5 p.m");
+        rekha.cancel()
+
+        //  second example
+
+        class Traintickets {
+
+
+
+            submit() {
+
+                alert(this.name + " your ticket is reserved and it\'s no : " + this.no)
+                let c = confirm("are u sure ?")
+                if (c) {
+                    alert("happy journey")
+                }
+
+            }
+            cancel() {
+
+                alert(this.name + " your ticket is cancelled and it\'s no : " + this.no)
+                let a = confirm("are u sure ?")
+                if (a) {
+                    alert("your ticket is cancel")
+                }
+            }
+            fill(name, no ,time) {
+                this.name = name,
+                    this.no = no ,
+                    this.time = time 
+            }
+             
+            get checkingtime(){
+                return this.time
+            }
+            set settime(x){
+                this.time = x
+            }
+
+        }
+
+        const ankita = new Traintickets()
+        const anjali = new Traintickets()
+        ankita.fill("ankita", 25346 ,"3 a.m")
+        anjali.fill("anjali", 42353 , "3 a.m")
+        anjali.submit()
+        console.log(ankita.checkingtime);
+        console.log(ankita.settime = "4 a.m");
+        ankita.submit()
+        anjali.cancel()
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
