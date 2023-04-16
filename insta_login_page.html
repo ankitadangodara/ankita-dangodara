@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+       
+        text-align: center;
+        margin: 100px ;
+    }
+    h1{
+        font-family:sans-serif ;
+    }
+    button , #login{
+        background-color: rgba(10, 42, 221, 0.664);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 36px;
+        color: white;
+        font-weight: 600;
+    }
+    input{
+        padding:  8px 26px;
+        margin-bottom: 20px;
+    }
+    b{
+       padding-bottom: 30px; 
+    }
+    button:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <div class="box">
+         <h1>instagram</h1>
+         <form action="./../wd-task/val-demo.html" onclick="return validateform()">
+            <button>Continue Using Facebook</button>
+         <br>
+        <p>____________ OR ___________ </p>
+         <br>
+         <input id="user" type="text" placeholder="phone number , username or email address...">
+         <br>
+         <input id="pass" type="password" placeholder="password">
+         <br>
+         <p id="arr"></p>
+          <input id="login" type="submit" value="Log in">
+         </form>
+
+    </div>
+
+    <script>
+        let user = document.getElementById('user');
+        let pass = document.getElementById('pass');
+        let ok = 1
+
+        function validateform() {
+
+    
+            if (user.value.length < 10  || pass.value.length < 8) {
+                document.getElementById('arr').innerHTML = 'username or password is incorrect'
+                ok = 0
+
+            }
+             
+            else {
+                document.getElementById('arr').innerHTML = ''
+                ok = 1
+            }
+            
+        
+    
+          
+            if (ok) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
